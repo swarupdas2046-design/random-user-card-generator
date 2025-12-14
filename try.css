@@ -4,11 +4,20 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
 
+@keyframes ani {
+  from {
+    scale: 0.9;
+  }
+  to {
+    scale: 1.1;
+  }
+}
 main {
   height: 100vh;
   width: 100vw;
@@ -88,26 +97,9 @@ main .ref {
   font-size: 20px;
   color: aliceblue;
   font-weight: 100;
+  animation: ani 3s infinite forwards;
+  transition: all linear 0.3s;
 }
 main .ref:active {
   scale: 0.95;
-}
-
-@media (max-width: 600px) {
-  main {
-    overflow: hidden;
-    display: block;
-    position: relative;
-  }
-  .data {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .ref {
-    position: absolute;
-    margin-top: 100px;
-    bottom: 0;
-  }
 }/*# sourceMappingURL=try.css.map */

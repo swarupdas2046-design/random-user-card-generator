@@ -1,123 +1,115 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
-main{
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.919);
-    // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQAOGtTlAvqafT5pyQPJGBYJx0DpunJl4R-Q&s);
-    // background-size: cover;
+@keyframes ani {
+  from {
+    scale: 0.9;
+  }
+  to {
+    scale: 1.1;
+  }
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.919);
+  // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQAOGtTlAvqafT5pyQPJGBYJx0DpunJl4R-Q&s);
+  // background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
+
+  .data {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 18px;
-    position: relative;
+    gap: 15px;
+  }
 
-    .data{
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all linear 0.3s;
+    height: 200px;
+    width: 450px;
+    border-radius: 10px;
+    // border: 1px solid white;
+    background-color: rgb(2, 42, 159);
+    cursor: pointer;
 
-    .card{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        transition: all linear 0.3s;
-        height: 200px;
-        width: 450px;
-        border-radius: 10px;
-        // border: 1px solid white;
-        background-color: rgb(2, 42, 159);
-        cursor: pointer;
-    
-        img{
-            height: 110px;
-            width: 110px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        .info{
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            // background-color: red;
-            text-align: center;
-        }
-        h3{
-            font-size: 30px;
-            color: aliceblue;
-            font-weight: 700;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        p{
-            font-size: 20px;
-            color: wheat;
-            font-style: italic;
-        }
-        button{
-            padding: 10px 30px;
-            background-color: rgb(219, 10, 118);
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 20px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: aliceblue;
-        }
-        button:active{
-            scale: 0.95;
-        }
+    img {
+      height: 110px;
+      width: 110px;
+      object-fit: cover;
+      border-radius: 50%;
     }
-    .card:hover{
-        transition: all linear 0.3s;
-        box-shadow: 0 0 35px rgb(219, 10, 118);
-        scale: 1.1;
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      // background-color: red;
+      text-align: center;
     }
+    h3 {
+      font-size: 30px;
+      color: aliceblue;
+      font-weight: 700;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    }
+    p {
+      font-size: 20px;
+      color: wheat;
+      font-style: italic;
+    }
+    button {
+      padding: 10px 30px;
+      background-color: rgb(219, 10, 118);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      color: aliceblue;
+    }
+    button:active {
+      scale: 0.95;
+    }
+  }
+  .card:hover {
+    transition: all linear 0.3s;
+    box-shadow: 0 0 35px rgb(219, 10, 118);
+    scale: 1.1;
+  }
 
-     .ref{
-            padding: 25px 70px;
-            // background-color: rgb(219, 10, 118);
-            background-color: rgb(10, 191, 214);
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            position: absolute;
-            bottom: 20%;
-            font-size: 20px;
-            color: aliceblue    ;
-            font-weight: 100;
-        }
-        .ref:active{
-            scale: 0.95;
-        }
-
-}
-
-@media(max-width:600px){
-    main{
-       
-        overflow: hidden;
-        display: block;
-        // padding: 10px;
-        position: relative;
-    }
-    .data{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .ref{
-        position: absolute;
-        margin-top: 100px;
-        bottom: 0;
-
-    }
+  .ref {
+    padding: 25px 70px;
+    // background-color: rgb(219, 10, 118);
+    background-color: rgb(10, 191, 214);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20%;
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: 100;
+    animation: ani 3s infinite forwards;
+    transition: all linear 0.3s;
+  }
+  .ref:active {
+    scale: 0.95;
+  }
 }
