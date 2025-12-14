@@ -8,8 +8,8 @@ html, body{
     width: 100%;
 }
 main{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: rgba(0, 0, 0, 0.919);
     // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQAOGtTlAvqafT5pyQPJGBYJx0DpunJl4R-Q&s);
     // background-size: cover;
@@ -98,4 +98,26 @@ main{
             scale: 0.95;
         }
 
+}
+
+@media(max-width:600px){
+    main{
+       
+        overflow: hidden;
+        display: block;
+        // padding: 10px;
+        position: relative;
+    }
+    .data{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .ref{
+        position: absolute;
+        margin-top: 100px;
+        bottom: 0;
+
+    }
 }
